@@ -1,0 +1,19 @@
+:root{
+  --my-ease-out: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+body{
+  background: pink !important;
+}
+.page-enter-active, .page-leave-active {
+  transition: all var(--my-ease-out) .5s;
+}
+.page-enter, .page-leave-to {
+  opacity: 0;
+}
+// my setting
+.page-enter{
+  transform: scale(1.2);
+}
+.page-leave-active{
+  transform: scale(0.8);
+}
