@@ -15,6 +15,7 @@ nav.global{
   left: 0;
   right: 0;
   bottom: auto;
+  width: 100%;
 
   display: flex;
   flex-flow: row;

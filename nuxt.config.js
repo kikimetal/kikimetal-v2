@@ -1,6 +1,6 @@
 module.exports = {
 
-  // mode: "spa",
+  mode: "spa",
   /*
   ** Headers of the page
   */
@@ -51,7 +51,12 @@ module.exports = {
         ]
       ]
     },
-    vendor: [ 'babel-polyfill' ],
+    /**
+     * グローバルにモジュールをインポートするにはここ vv
+     */
+    vendor: [
+      'babel-polyfill',
+    ],
   },
 
   css: [
