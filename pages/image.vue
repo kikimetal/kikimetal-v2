@@ -1,7 +1,7 @@
 <template>
   <section class="page-container">
     <div>
-      <Heading title="WEBSITE" subtitle="kikimetal.com ver2 with Nuxt." />
+      <Heading title="Image" subtitle="kikimetal.com ver2 with Nuxt." />
 
       <div v-for="(site, index) in sites" :key="index + site.date">
         <Heading :title="site.title" :subtitle="index" />

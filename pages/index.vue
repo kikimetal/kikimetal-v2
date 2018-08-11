@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section class="page-container">
     <div>
 
       <Heading title="KIKIMETAL" subtitle="kikimetal.com ver2 with Nuxt." />

@@ -21,10 +21,10 @@ export default {
 .Heading{
   font-size: 44rem;
 
-  display: flex;
-  flex-flow: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  // display: flex;
+  // flex-flow: column wrap;
+  // justify-content: flex-start;
+  // align-items: flex-start;
 
   padding: 0.9em 0.5em 0em;
   text-align: left;
@@ -34,6 +34,7 @@ export default {
     font-size: 44rem;
     line-height: 1.1;
     font-weight: bold;
+    word-wrap: break-word;
   }
   &__subtitle{
     font-size: 20rem;
