@@ -1,58 +1,40 @@
 <template>
   <section class="container">
     <div>
-      <app-logo/>
-      <h1 class="title">
-        kiki Website
-      </h1>
-      <h2 class="subtitle">
-        kikimetal.com ver2 with Nuxt.
-      </h2>
+      <Heading title="WEBSITE" subtitle="kikimetal.com ver2 with Nuxt." />
 
-      <router-link :to="{ path: '/', params: {} }" exact>home</router-link>
-      <router-link :to="{ path: '/website', params: {} }" exact>website</router-link>
+      <div v-for="(site, index) in sites" :key="index + site.date">
+        <Heading :title="site.title" :subtitle="index" />
+      </div>
 
     </div>
   </section>
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
+import Btn from '~/components/Btn.vue'
+import Heading from '~/components/Heading.vue'
+
+import sites from '~/assets/websites.json'
 
 export default {
   components: {
-    AppLogo
-  }
+    Btn,
+    Heading,
+  },
+  data () {
+    return { sites }
+  },
+  methods: {
+  },
+  created () {
+    if (process.browser) {
+      console.log(this.sites)
+    }
+  },
 }
 </script>
 
 <style>
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
 
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
 </style>

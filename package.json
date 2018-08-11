@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
+    "babel-loader": "^7.1.5",
     "babel-polyfill": "^6.26.0",
     "babel-preset-vue-app": "^2.0.0",
     "eslint": "^4.15.0",

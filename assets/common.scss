@@ -1,19 +1,40 @@
 :root{
-  --my-ease-out: cubic-bezier(0.165, 0.84, 0.44, 1);
+  // --general: #354844;
+  // --primary: #6DC6D1;
+  // --secondary: #B7DAA2;
+  // --shadow: rgba(12, 128, 114, 0.22);
+  // --background: #F6F6F6;
+  // --heading: #354844;
+  // --border-radius: 16px;
+  // --ease-out-back: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  //
+  // --kiki-pink: rgb(255, 157, 238);
+  // --kiki-lavender: rgb(139, 131, 218);
+  --ease-out: cubic-bezier(0.165, 0.84, 0.44, 1);
+  --scrollY: 0px;
 }
-body{
-  background: pink !important;
+
+a{
+  text-decoration: none;
+  color: inherit;
 }
-.page-enter-active, .page-leave-active {
-  transition: all var(--my-ease-out) .5s;
+
+.page-enter-active {
+  transition:
+    opacity ease .5s,
+    transform var(--ease-out) .6s;
+}
+.page-leave-active {
+  transition:
+    opacity var(--ease-out) .3s,
+    transform var(--ease-out) .3s;
 }
 .page-enter, .page-leave-to {
   opacity: 0;
 }
-// my setting
 .page-enter{
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 .page-leave-active{
-  transform: scale(0.8);
+  transform: scale(0.9);
 }

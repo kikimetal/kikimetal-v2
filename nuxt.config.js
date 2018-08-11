@@ -1,4 +1,6 @@
 module.exports = {
+
+  // mode: "spa",
   /*
   ** Headers of the page
   */
@@ -53,6 +55,7 @@ module.exports = {
   },
 
   css: [
-    'assets/common.scss'
+    'assets/myreset.scss',
+    'assets/common.scss',
   ],
 }
