@@ -1,12 +1,18 @@
 <template lang="html">
-  <div class="Btn">
+  <div class="Btn" :style="style">
     {{ text }}
   </div>
 </template>
 
 <script>
 export default {
-  props: ["text"],
+  props: ["text", "bg"],
+  data () {
+    return {
+      style: this.bg ? {background: this.bg} : {}
+    }
+  },
+
 }
 </script>
 

@@ -2,16 +2,13 @@
   <section class="page-container">
     <div>
 
-      <Heading title="KIKIMETAL" subtitle="kikimetal.com ver2 with Nuxt." />
+      <Logotype fill="pink" />
+      <!-- <Heading title="KIKIMETAL" subtitle="kikimetal.com ver2 with Nuxt." /> -->
 
-      <h1>LazyLoadImg</h1>
+      <Heading title="LazyLoadImg" subtitle="LazyLoadImg" />
       <LazyLoadImg filename="kikigirl.jpg"/>
       <LazyLoadImg filename="kikigirl.jpg"/>
       <LazyLoadImg filename="kikigirl.jpg"/>
-
-      <h1>Normal</h1>
-      <!-- <img src="~/assets/img/kikigirl.jpg" alt="ききるんのイラスト" /> -->
-
 
       <div class="">
         <router-link :to="{ path: '/', params: {} }" exact><Btn text="home"></Btn></router-link>
@@ -27,15 +24,20 @@
 import Heading from '~/components/Heading.vue'
 import Btn from '~/components/Btn.vue'
 import LazyLoadImg from '~/components/LazyLoadImg.vue'
+import Logotype from '~/components/Logotype.vue'
 
 export default {
   components: {
     Heading,
     Btn,
     LazyLoadImg,
+    Logotype,
   }
 }
 </script>
 
 <style>
+.logotype{
+  fill: pink;
+}
 </style>
