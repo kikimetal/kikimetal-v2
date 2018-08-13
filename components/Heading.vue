@@ -21,11 +21,6 @@ export default {
 .Heading{
   font-size: 44rem;
 
-  // display: flex;
-  // flex-flow: column wrap;
-  // justify-content: flex-start;
-  // align-items: flex-start;
-
   padding: 0.9em 0.5em 0em;
   text-align: left;
   color: #333;
