@@ -14,7 +14,6 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "axios-jsonp-pro": "^1.1.4",
     "nuxt": "^1.0.0"
   },
   "devDependencies": {

@@ -44,7 +44,7 @@ export default {
 
   &__title, &__subtitle{
     text-transform: uppercase;
-    background: linear-gradient(90deg, rgb(255, 172, 229) 0%, rgb(238, 171, 255) 100%);
+    background: linear-gradient(90deg, rgb(255, 172, 190) 0%, rgb(226, 171, 255) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
