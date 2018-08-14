@@ -11,3 +11,15 @@ insert_final_newline = true
 
 [*.md]
 trim_trailing_whitespace = false
+
+# Nuxtのビルドファイル
+.nuxt/*.js
+
+# `nuxt generate`時のディレクトリ
+dist/*.js
+
+# npmパッケージ
+node_modules/*.js
+
+# プラグインとして使用するファイル
+plugins/*.js

@@ -64,4 +64,9 @@ module.exports = {
     'assets/myreset.scss',
     'assets/common.scss',
   ],
+
+  router: {
+    base: '/'
+  },
+
 }
