@@ -29,7 +29,7 @@ export default {
   },
   created () {
     if (process.browser) {
-      console.log(this.sites)
+      // console.log(this.sites)
     }
   },
 }

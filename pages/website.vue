@@ -7,7 +7,7 @@
       <div class="transition-container">
         <transition name="slide-fade">
           <div v-if="!sheet.length" key="pending" class="transition-item pending">
-            <Btn text="GETT!!!!" :overrideStyle="{background: 'lavender', fontSize: '40px', color: 'white'}" />
+            <Btn to="/" exact text="GETT!!!!" :overrideStyle="{background: 'lavender', fontSize: '40px', color: 'white'}" />
           </div>
           <div v-else key="fulfilled" class="transition-item fulfilled">
             <div v-for="(row, index) in sheet" :key="index + row.date">

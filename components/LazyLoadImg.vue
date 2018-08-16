@@ -1,15 +1,18 @@
 <template lang="html">
   <div class="LazyLoadImg" :style="{ backgroundImage: 'url(' + require('~/assets/img/' + filename) + ')' }">
-    <div class="LazyLoadImg__placeholder" :class="{loaded: isLoaded}"><img class="loader" src="~/assets/img/loading.svg" alt="" /></div>
+    <div class="LazyLoadImg__placeholder" :class="{loaded: isLoaded}">
+      <img class="LazyLoadImg__placeholder__loader-gif" src="~/assets/img/loading.svg" alt="" />
+      <span class="LazyLoadImg__placeholder__loader-text">LOADING</span>
+    </div>
     <img class="LazyLoadImg__fake" :src="require('~/assets/img/' + filename)" @load="loaded"/>
   </div>
 </template>
 
 <script>
 export default {
-  props: [
-    "filename"
-  ],
+  props: {
+    filename: { type: String, default: 'kikigirl.jpg' },
+  },
   data () {
     return {
       isLoaded: false,
@@ -17,15 +20,13 @@ export default {
   },
   methods: {
     loaded () {
-      console.log("Loaded!!")
       this.isLoaded = true
-      console.log(this.isLoaded)
     }
   }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .LazyLoadImg{
   position: relative;
   width: 100%;
@@ -49,20 +50,37 @@ export default {
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    background: white;
+    --stripe-color-01: rgb(255, 240, 245);
+    --stripe-color-02: rgb(202, 238, 242);
+    $stripe-size: 30px;
+    background: repeating-linear-gradient(90deg, var(--stripe-color-01), var(--stripe-color-01) $stripe-size, var(--stripe-color-02) $stripe-size, var(--stripe-color-02) $stripe-size*2);
 
     user-select: none;
     pointer-events: none;
-    transition: all 0.4s ease 0.7s;
+    transition: opacity 0.5s ease-out 0.9s;
 
     &.loaded{
-      transform: scale(1.3);
       opacity: 0;
     }
 
-    .loader{
-      width: 100px;
+    .LazyLoadImg__placeholder__loader-gif{
+      width: 210px;
       height: auto;
+      transition: transform 0.5s ease-out 0.9s;
+    }
+    .LazyLoadImg__placeholder__loader-text{
+      font-size: 24rem;
+      // font-weight: lighter;
+      margin-top: -0.5em;
+      color: #fff;
+      text-shadow: 0 2px 10px rgba(119, 92, 114, 0.45);
+      transition: transform 0.5s ease-out 0.9s;
+    }
+    &.loaded{
+      .LazyLoadImg__placeholder__loader-gif,
+      .LazyLoadImg__placeholder__loader-text{
+        transform: scale(0.8);
+      }
     }
   }
 
