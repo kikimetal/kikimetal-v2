@@ -6,7 +6,8 @@ Nuxt + Firebase でやる！
 
 - [x] firebase deploy
 - [x] firebase hosting / functions の利用
-- [ ] firebase functions で npm モジュールを使う
+- [x] firebase functions で npm モジュールを使う
+- [ ] functions から他のサーバーへリクエスト... うまくいかない...
 - [x] firebase カスタムドメイン設定
 - [x] FetchAsGoogle でレンダリング大丈夫そうか確認
 - [ ] 実機IEで表示確認
@@ -21,7 +22,7 @@ Nuxt + Firebase でやる！
 - [x] コンポーネント同士のtransition
 - [x] ポリフィル挿入
 - [x] 外部モジュールの入れ方確認
-- [ ] Vuex Store の利用
+- [x] Vuex Store の利用
 - [ ] Store へ Nuxtのコンポーネントの fetch で設定
 - [ ] [リンスとレンダリングの際の注意](https://jp.vuejs.org/v2/guide/list.html)
 - [ ] [トランジションについて学ぶ](https://jp.vuejs.org/v2/guide/transitions.html)
