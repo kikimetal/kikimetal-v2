@@ -31,6 +31,10 @@
 body{
   font-size: 16rem;
 }
+body * {
+  // Nuxt の場合これ入れないとスクロールで挙動おかしくなる
+  overflow: hidden;
+}
 
 h1, h2, h3, h4, h5, h6,
 div, p, section, article, aside{
